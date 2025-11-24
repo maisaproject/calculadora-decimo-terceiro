@@ -5,41 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de 13º Salário 2025</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <div class="calculator-container">
         <div class="calculator-header">
-            <div class="calculator-icon">
-                <i class="fas fa-calculator"></i>
             </div>
             <h2>Calculadora de Décimo Terceiro 2025</h2>
             <p>Calcule de forma rápida e precisa o valor do seu décimo terceiro salário</p>
         </div>
         <div class="calculator-body">
             <div class="input-group">
-                <label for="salarioBruto">
-                    <i class="fas fa-money-bill-wave"></i>Salário bruto
-                </label>
+                <label for="salarioBruto">Salário bruto</label>
                 <input type="number" id="salarioBruto" placeholder="0,00" step="0.01" min="0">
                 <span class="input-hint">Informe seu salário bruto mensal</span>
             </div>
             <div class="input-group">
-                <label for="numeroDependentes">
-                    <i class="fas fa-users"></i>Número de dependentes
+                <label for="numeroDependentes">Número de dependentes
                     <span class="tooltip">
-                        <i class="fas fa-question-circle"></i>
-                        <span class="tooltiptext">Dependentes para dedução do IRRF (R$ 189,59 por dependente)</span>
+                    <span class="tooltiptext">Dependentes para dedução do IRRF (R$ 189,59 por dependente)</span>
                     </span>
                 </label>
                 <input type="number" id="numeroDependentes" value="0" min="0">
             </div>
             <div class="input-group">
-                <label for="numeroParcelas">
-                    <i class="fas fa-money-check"></i>Número de parcelas
+                <label for="numeroParcelas">Número de parcelas
                 </label>
                 <select id="numeroParcelas">
                     <option value="1" selected>Parcela única</option>
@@ -47,53 +37,47 @@
                 </select>
             </div>
             <div class="input-group">
-                <label for="mesesTrabalhados">
-                    <i class="fas fa-calendar-alt"></i>Meses trabalhados
+                <label for="mesesTrabalhados">Meses trabalhados
                     <span class="tooltip">
-                        <i class="fas fa-question-circle"></i>
-                        <span class="tooltiptext">Meses trabalhados no ano atual</span>
+                    <span class="tooltiptext">Meses trabalhados no ano atual</span>
                     </span>
                 </label>
                 <input type="number" id="mesesTrabalhados" value="12" min="1" max="12">
                 <span class="input-hint">De 1 a 12 meses</span>
             </div>
         </div>
-        <div class="loading">
-            <i class="fas fa-spinner"></i>
-        </div>
+        <div class="loading">Calculando... </div>
         <div class="calculator-buttons">
-            <button id="limpar" class="btn btn-clean">
-                <i class="fas fa-eraser"></i>Limpar
+            <button id="limpar" class="btn btn-clean">Limpar
             </button>
-            <button id="calcular" class="btn btn-calculate">
-                <i class="fas fa-calculator"></i>Calcular
+            <button id="calcular" class="btn btn-calculate">Calcular
             </button>
         </div>
         <div id="resultado-container" class="resultado-container">
-            <h3><i class="fas fa-chart-pie"></i>Resultado do Cálculo</h3>
+            <h3>Resultado do Cálculo</h3>
             <ul class="result-list">
                 <li class="result-item">
-                    <span class="result-label"><i class="fas fa-coins"></i>Valor bruto do 13º salário:</span>
+                    <span class="result-label">Valor bruto do 13º salário:</span>
                     <span id="resultado-total-bruto" class="result-value"></span>
                 </li>
                 <li id="parcela-1-item" class="result-item" style="display:none;">
-                    <span class="result-label"><i class="fas fa-money-bill"></i>Primeira parcela (até 30/11):</span>
+                    <span class="result-label">Primeira parcela (até 30/11):</span>
                     <span id="resultado-primeira-parcela" class="result-value"></span>
                 </li>
                 <li id="parcela-2-item" class="result-item" style="display:none;">
-                    <span class="result-label"><i class="fas fa-money-bill-wave"></i>Segunda parcela (até 20/12):</span>
+                    <span class="result-label">Segunda parcela (até 20/12):</span>
                     <span id="resultado-segunda-parcela" class="result-value"></span>
                 </li>
                 <li class="result-item">
-                    <span class="result-label"><i class="fas fa-shield-alt"></i>Desconto INSS:</span>
+                    <span class="result-label">Desconto INSS:</span>
                     <span id="resultado-inss" class="result-value descontos"></span>
                 </li>
                 <li class="result-item">
-                    <span class="result-label"><i class="fas fa-percentage"></i>Desconto IRRF:</span>
+                    <span class="result-label">Desconto IRRF:</span>
                     <span id="resultado-irrf" class="result-value descontos"></span>
                 </li>
                 <li class="result-item total">
-                    <span class="result-label"><i class="fas fa-wallet"></i>Valor líquido total:</span>
+                    <span class="result-label">Valor líquido total:</span>
                     <span id="resultado-total-liquido" class="result-value"></span>
                 </li>
             </ul>
@@ -105,4 +89,5 @@
     </div>
     <script src="scripts/main.js"></script>
 </body>
+
 </html>
